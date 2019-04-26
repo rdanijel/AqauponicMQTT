@@ -1,5 +1,5 @@
 var MQTT_CLIENT_ID = "rdanijel_aquaponic_web"+Math.floor((1 + Math.random()) * 0x10000000000).toString();
-var MQTT_CLIENT = new Paho.MQTT.Client("iot.eclipse.org", 80, "/ws", MQTT_CLIENT_ID);
+var MQTT_CLIENT = new Paho.MQTT.Client("iot.eclipse.org", 443, "/ws", MQTT_CLIENT_ID);
 MQTT_CLIENT.connect({ onSuccess: myClientConnected });
 MQTT_CLIENT.onMessageArrived = myMessageArrived;
 
